@@ -1,0 +1,59 @@
+#header .flag {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url('../img/site.png') no-repeat top left;
+}
+
+#header .flag.flag-us {
+    background-position: 0 0;
+}
+
+#header .flag.flag-ca {
+    background-position: 0 -20px;
+}
+
+#header .flag.flag-uk {
+    background-position: 0 -40px;
+}
+
+#header .flag.flag-de {
+    background-position: 0 -60px;
+}
+
+#header .flag.flag-fr {
+    background-position: 0 -80px;
+}
+
+#header .flag.flag-es {
+    background-position: 0 -100px;
+}
+
+#header .flag.flag-it {
+    background-position: 0 -120px;
+}
+
+#header .flag.flag-jp {
+    background-position: 0 -140px;
+}
+
+#header .flag.flag-in {
+    background-position: 0 -160px;
+}
+
+#header .flag.flag-br {
+    background-position: 0 -180px;
+}
+
+#header .flag.flag-cn {
+    background-position: 0 -200px;
+}
+
+.header_content .choose li.action, .header_content .choose > .clearfix > li:hover {
+    border-bottom: 2px solid #38c5cb;
+}
+
+#header .header_content .choose > ul > li.categories > div.categories_list ul > li > a:hover {
+    color: #38c5cb;
+}

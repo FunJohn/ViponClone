@@ -1,0 +1,257 @@
+#main {
+    background-color: #f5f5f5;
+    margin-top: 24px;
+}
+
+#main #mainLeft {
+    width: 300px;
+    margin-left: 54px;
+}
+
+#main #activeDirector {
+    margin-bottom: 14px;
+}
+
+#main #newsArticles h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #45c5cb;
+    line-height: 54px;
+    padding-left: 32px;
+}
+
+#newsArticles .newsArticles-list {
+    margin-top: 14px;
+}
+
+#newsArticles .newsArticles-item {
+    margin-bottom: 14px;
+    background-color: #fff;
+}
+#newsArticles .newsArticles-item:last-child {
+    margin-bottom: 0;
+}
+
+#newsArticles .newsArticles-item a {
+    text-decoration: none;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-img {
+    width: 100%;
+
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body {
+    margin-top: 14px;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body p {
+    font-size: 14px;
+    color: #444;
+    line-height: 22px;
+    margin: 0 30px;
+    margin-bottom: 13px;
+    position: relative;
+    max-height: 44px;
+    overflow: hidden;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body p::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 40px;
+    background: -webkit-linear-gradient(left, rgba(250, 250, 250, .3), #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body .time-view {
+    font-size: 14px;
+    line-height: 12px;
+    color: #999;
+    padding: 0 30px 30px;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body .time-view span:last-child {
+    font-size: 14px;
+    line-height: 10px;
+    margin-left: 2px;
+}
+
+#newsArticles .newsArticles-item .newsArticles-item-body .time-view span.view {
+    display: inline-block;
+    width: 21px;
+    height: 14px;
+    vertical-align: middle;
+    background: url("../img/newsArticles-3.png") no-repeat;
+    margin-left: 11px;
+}
+
+#mainRight {
+    margin-left: 36px;
+    width: 1240px;
+}
+
+.box a {
+    text-decoration: none;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    text-shadow: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 140px;
+
+}
+
+.carousel-control.left {
+    left: 7px;
+}
+
+.carousel-control.right {
+    right: 7px;
+}
+
+#featuredDeals .featuredDeals-prev, #featuredDeals .featuredDeals-next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../images/ant/left-tight.png") 0 0 no-repeat;
+}
+
+#featuredDeals .featuredDeals-next {
+    background-position: -57px 0;
+}
+
+.carousel-control .owl-prev, .carousel-control .owl-next {
+    width: 78px;
+    position: static;
+    display: inline-block;
+    height: 78px;
+}
+
+.carousel-control .owl-prev {
+    left: 7px;
+}
+
+.carousel-control .owl-next {
+    right: 7px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+#carousel-example-generic .box {
+    display: inline-block;
+}
+
+#featuredDeals > h3, #bestDiscount > h3, #hotDeals > h3, #newestDeals > h3 {
+    margin: 0 7px;
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    padding-right: 7px;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+
+#featuredDeals > h3 a, #bestDiscount > h3 a, #hotDeals > h3 a, #newestDeals > h3 a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+#featuredDeals > h3 a span.right-icon, #bestDiscount > h3 a span.right-icon, #hotDeals > h3 a span.right-icon, #newestDeals > h3 a span.right-icon {
+    display: inline-block;
+    width: 9px;
+    height: 18px;
+    background: url("../images/ant/left-tight.png") -120px 0 no-repeat;
+    vertical-align: top;
+    margin-left: 9px;
+}
+#featuredDeals, #bestDiscount, #hotDeals, #newestDeals{
+    margin-bottom: 15px;
+}
+#bestDiscount > .bestDiscount-list, #hotDeals > .hotDeals-list, #newestDeals > .newestDeals-list,#featuredDeals > .featuredDeals-list {
+    position: relative;
+}
+
+#featuredDeals .carousel-inner {
+    margin: 0 auto;
+}
+#featuredDeals{
+    margin-bottom: 30px;
+}
+
+#main .more {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+
+#main .more a {
+    text-decoration: none;
+    line-height: 57px;
+    color: #333;
+    font-size: 20px;
+}
+
+@media (max-width: 1107px) {
+    #main #mainLeft {
+        display: none;
+    }
+}
+
+@media (max-width: 1014px) and (min-width: 830px) {
+    .carousel-control.left {
+        left: -16px;
+    }
+
+    .carousel-control.right {
+        right: -16px;
+    }
+}
+
+#activeDirector img{
+    width: 100%;
+}
+
+#promoProgram div{
+    margin-top: 14px;
+}
+#promoProgram div img{
+    width: 100%;
+}
+
+#footer{
+    padding-top: 0;
+}
+
+#activeDirector1{
+    padding-bottom: 34px;
+}
+#activeDirector1 div{
+    width: 50%;
+}
+
+#activeDirector1 div img{
+    width: 100%;
+}
+
+
+
+#newsArticles .newsArticles-item:last-child {
+    margin-bottom: 0;
+}

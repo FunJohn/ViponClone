@@ -1,0 +1,207 @@
+#product-page .shop_name {
+    font-size: 16px;
+}
+
+#product-page .shop_name .seller {
+    margin-right: 42px;
+}
+
+#product-page .shop_name .seller > span:first-child {
+    color: #999;
+}
+
+#product-page .shop_name div.pull-left > span {
+    margin-left: 3px;
+    color: #f8991d;
+}
+
+#product-page .shop_name .seller > span:last-child {
+    color: #333;
+    margin-left: 7px;
+}
+
+#product-page .shop_name div.pull-left > i {
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    margin-right: 8px;
+}
+
+#product-page .shop_name div.pull-left > i.has_no_star {
+    background: url('/images/new_vipon/coming_soon.png') -31px 0 no-repeat;
+}
+
+#product-page .shop_name div.pull-left > i.has_star {
+    background: url('/images/new_vipon/coming_soon.png') 0 0 no-repeat;
+}
+
+#product-page .shop_name div.pull-left > i.has_half_star {
+    background: url('/images/new_vipon/coming_soon.png') -69px -11px no-repeat;
+}
+
+#product-page .shop_name div.pull-left > span {
+    margin-left: 3px;
+    color: #f8991d;
+}
+
+#product-page .shop_name div.his_all_deals {
+    margin-left: 35px;
+}
+
+#product-page .shop_name div.his_all_deals a {
+    text-decoration: none;
+    line-height: 18px;
+    font-size: 12px;
+    color: #38c5cb;
+    display: inline-block;
+    padding: 0 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+#product-page .shop_name {
+    padding: 29px 0;
+    padding-bottom: 9px;
+}
+
+#run_out_div .request-btn {
+    background: #e5e5e5;
+}
+
+#run_out_div .request-btn {
+    background: #e5e5e5;
+    color: #333333;
+}
+
+#footer {
+    background-color: white;
+    padding-top: 0;
+}
+
+.fixed-box {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    width: 10%;
+    /*min-width: 140px;*/
+}
+
+.fixed-box-close {
+    position: absolute;
+    top: -27px;
+    right: 0;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fixed-box a > img {
+    width: 60%;
+    position: absolute;
+    bottom: 14%;
+    left: 21.5%;
+}
+
+.fixed-box a:nth-child(3) > img {
+    bottom: 27%;
+}
+
+.group-buy {
+    position: absolute;
+    bottom: 75px;
+    right: 23px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.group-buy li {
+    float: left;
+}
+
+.group-buy li:first-child {
+    margin-right: 18px;
+}
+
+#groupBuy img {
+    margin: 0;
+}
+
+#groupBuy .modal-body {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin: 0 auto;
+        margin-top: -200px;
+        top: 50%;
+    }
+}
+
+.group-span {
+    text-align: left;
+    transition: all .3s;
+    font-size: 0;
+    -webkit-text-size-adjust: none;
+    display: none;
+    cursor: pointer;
+    width: 330px;
+}
+
+.group-span span {
+    font-size: 20px;
+}
+
+.group-span #groupPrice {
+    display: inline-block;
+}
+
+.group-span:hover {
+    color: #2d8cf0;
+}
+
+.group-span img {
+    vertical-align: bottom;
+}
+
+.group-span > div:first-child {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #f6c57a;
+    font-weight: 600;
+    padding: 12px 0;
+    display: inline-block;
+    width: 241px;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.group-span > .group-share {
+    display: inline-block;
+    font-size: 0;
+    -webkit-text-size-adjust: none;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+.group-span > .group-share span {
+    font-size: 12px;
+    padding: 9px;
+    padding-left: 8px;
+    border-radius: 50%;
+    background-color: #f6c57a;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.group-span > .group-share span:last-child {
+    padding: 8px;
+    background-color: rgba(63, 197, 203, .8);
+    padding-top: 12px;
+    padding-bottom: 11px;
+    position: absolute;
+    right: -33px;
+    top: -12px;
+}

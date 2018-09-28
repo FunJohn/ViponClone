@@ -1,0 +1,5 @@
+var exclude_links="amztracker.com,amztk.com,amzreviewtrader.com,amzreviews.co.uk,vipon.com";function anonymize_links(){var a=window.location.hostname;if(exclude_links!=""&&!exclude_links.match(a))exclude_links+=","+a;else if(exclude_links=="")exclude_links=a;excluded_links=exclude_links.split(",");excluded_links_count=excluded_links.length;var b=document.getElementsByTagName('a');var c=b.length;var j=0;var d=true;for(var i=0;i<c;i++){var e=b[i].href;j=0;d=true;if((e&&e.match("http://"))||(e&&e.match("https://"))){while(j<excluded_links_count){if(e.match(excluded_links[j])){d=false}
+j++}
+if(d)b[i].href=encode64(e)}}}
+var keyStr="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";function encode64(a){var b="";var c,chr2,chr3;var d,enc2,enc3,enc4;var i=0;do{c=a.charCodeAt(i++);chr2=a.charCodeAt(i++);chr3=a.charCodeAt(i++);d=c>>2;enc2=((c&3)<<4)|(chr2>>4);enc3=((chr2&15)<<2)|(chr3>>6);enc4=chr3&63;if(isNaN(chr2)){enc3=enc4=64}else if(isNaN(chr3)){enc4=64}
+b=b+keyStr.charAt(d)+keyStr.charAt(enc2)+keyStr.charAt(enc3)+keyStr.charAt(enc4)}while(i<a.length);return 'https://www.vipon.com/shorten/?l='+encodeURIComponent(b)}

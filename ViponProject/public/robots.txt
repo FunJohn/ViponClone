@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /TermsPage
+Disallow: /PrivacyPolicy
+Disallow: /DMCA
+Disallow: /contact-us
+Disallow: /profile/
+Disallow: /comment/
+Disallow: /go/
+Disallow: /resources/
+Disallow: /login/
+Disallow: /products/
+Disallow: /user/
+Disallow: /coupon/
+Disallow: /*coupons/
+Disallow: /*?*
+Disallow: /help/
+Disallow: /tags/
+
+Disallow: /electric-skateboard-coupons
+Disallow: /articles/
+Disallow: /*.aspx
+Disallow: /category/

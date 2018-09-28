@@ -1,0 +1,145 @@
+#Add files type
+	AddType application/x-font-ttf        .ttf
+	AddType application/octet-stream      .ttf
+	AddType font/truetype                 .ttf
+	AddType font/ttf                      .ttf
+	AddType application/font-wof          .woff
+	AddType application/x-font-woff       .woff
+	AddType application/x-woff            .woff
+	AddType application/vnd.ms-fontobject .eot
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+# Redirect non www to www
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
+
+    #RewriteCond %{HTTP_HOST} ^dontpayall.com [NC,OR]
+	#RewriteCond %{HTTP_HOST} ^www.dontpayall.com [NC]
+	#RewriteRule ^(.*)$ www.dontpayall.com/$1 [L,R=301,NC]
+
+	# Remove ?ModPagespeed=noscript
+    RewriteCond %{QUERY_STRING}    "ModPagespeed" [NC]
+	RewriteRule (.*)  /$1? [R=301,L]
+	# Remove ?PageSpeed=noscript
+	RewriteCond %{QUERY_STRING}    "PageSpeed" [NC]
+	RewriteRule (.*)  /$1? [R=301,L]
+
+	# Redirect dontpayall.com/blog to blog.dontpayall.com
+
+	RewriteCond %{HTTP_HOST} ^(www\.)?dontpayall.com$ [NC]
+    RewriteRule ^/?blog/(.*)$ http://www.blog.dontpayall.com/$1 [L,R=301]
+    RewriteCond %{HTTP_HOST} ^(www\.)?dontpayall.com$ [NC]
+    RewriteRule ^/?blog(.*)$ http://www.blog.dontpayall.com/$1 [L,R=301]
+
+    redirect 301 i-love-cross-stitch-uk-coupons http://www.dontpayall.com/sew-and-so-uk-coupons
+	redirect 301 shop-sharp-uk-coupons http://www.dontpayall.com/sharp-uk-coupons
+	redirect 301 iviewcameras-uk-coupons http://www.dontpayall.com/laptops-direct-uk-coupons
+	redirect 301 cordless-phone-uk-coupons http://www.dontpayall.com/ligo-uk-coupons
+	redirect 301 healthy-and-essential-uk-coupons http://www.dontpayall.com/your-healthy-uk-coupons
+	redirect 301 apollo-direct-coupons http://www.dontpayall.com/hughes-uk-coupons
+	redirect 301 nets-2-go-uk-coupons http://www.dontpayall.com/woodyatt-curtains-coupons
+	redirect 301 orange-uk-coupons http://www.dontpayall.com/ee-uk-coupons
+	redirect 301 flaming-barbecues-uk-coupons http://www.dontpayall.com/red-shed-uk-coupons
+	redirect 301 south-beach-smoke-uk-coupons http://dontpayall.com/shop-ecigs-coupons
+	redirect 301 britink-coupons http://dontpayall.com/needham-ink-coupons
+	redirect 301 t-shirts-coupons http://www.dontpayall.com/shirts-coupons
+	redirect 301 bank-fashion-uk-coupons http://www.dontpayall.com/ark-uk-coupons
+	redirect 301 gear-zone-uk-coupons http://www.dontpayall.com/jarrold-uk-coupons
+	redirect 301 desmazieres-shoes-uk-coupons http://www.dontpayall.com/chauss-expo-coupons
+	redirect 301 puritans-pride-uk-coupons http://www.dontpayall.com/puritans-pride-coupons
+	## USER IP BANNING
+	<Limit GET POST>
+	 order allow,deny
+	 deny from 184.154.38.45
+	 deny from 78.46.158.231
+	 deny from 178.33.232.230
+	 deny from 104.254.244.128
+	 deny from 78.110.60.230
+	 deny from 82.80.221.158
+	 deny from 66.6.42.21
+	 deny from 162.255.119.250
+	 deny from 169.54.177.104
+	 deny from 184.169.146.2
+	 deny from 199.83.132.88
+	 deny from 46.255.224.102
+	 deny from 65.49.16.156
+	 deny from 192.254.141.180
+	 deny from 144.76.113.114
+	 allow from all
+	</Limit>
+    #Redirect for stores are renamed
+
+    Redirect 301 /auth/login http://www.dontpayall.com/login
+    Redirect 301 /approved-colleges-voucher-codes http://www.dontpayall.com/geteducated-coupons
+    Redirect 301 /saint-benedict-press-coupons http://www.dontpayall.com/tan-books-coupons
+    Redirect 301 /argan-oil-coupons http://www.dontpayall.com/essence-of-argan-coupons
+    Redirect 301 /match-more-lotto-coupons http://www.dontpayall.com/lotto-social-coupons
+    Redirect 301 /gone-digging-uk-coupons http://www.dontpayall.com/i-just-love-it-coupons
+    Redirect 301 /healthier-smoker-coupons http://www.dontpayall.com/wicked-e-juice-coupons
+    Redirect 301 /hibu-uk-coupons http://www.dontpayall.com/yell-business-coupons
+    Redirect 301 /pure-acai-berry-coupons http://www.dontpayall.com/bauer-nutrition-coupons
+    Redirect 301 /salgar-hotels-coupons http://www.dontpayall.com/portblue-hotels-resorts-coupons
+    Redirect 301 /beauty-training-uk-coupons http://www.dontpayall.com/next-step-beauty-coupons
+    Redirect 301 /the-beauty-room-uk-coupons http://www.dontpayall.com/gatineau-coupons
+
+    # Redirect Trailing Slashes...
+    #RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+
+</IfModule>
+
+<ifModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault A0300
+
+	#Add cache control to file header
+	ExpiresByType application/pdf A300
+	ExpiresByType application/x-javascript A604800
+	ExpiresByType application/javascript A604800
+	ExpiresByType text/javascript A604800
+	ExpiresByType application/x-shockwave-flash A604800
+	ExpiresByType application/shockwave-flash A604800
+	ExpiresByType audio/mpeg A604800
+	ExpiresByType image/gif A604800
+	ExpiresByType image/jpeg A604800
+	ExpiresByType image/png A604800
+	ExpiresByType image/x-icon A2592000
+	ExpiresByType text/css A604800
+	ExpiresByType video/mpeg A2592000
+	ExpiresByType video/quicktime A2592000
+	ExpiresByType video/x-flv A2592000
+	ExpiresByType video/flv A2592000
+
+	ExpiresByType application/x-font-ttf A31536000
+	ExpiresByType application/octet-stream A31536000
+	ExpiresByType font/truetype A31536000
+	ExpiresByType font/ttf A31536000
+	ExpiresByType application/font-wof A31536000
+	ExpiresByType application/x-font-woff A31536000
+	ExpiresByType application/x-woff A31536000
+	ExpiresByType application/vnd.ms-fontobject A31536000
+
+	# 1 YEAR - doesn't change often
+	<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+	ExpiresDefault A31536000
+	</FilesMatch>
+
+	# 1 WEEK - possible to be changed, unlikely
+	<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+	ExpiresDefault A604800
+	</FilesMatch>
+	<FilesMatch "\.(txt|xml|js|css)$">
+	ExpiresDefault A604800
+	</FilesMatch>
+</ifModule>

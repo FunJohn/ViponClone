@@ -1,0 +1,104 @@
+
+@font-face
+{
+    font-family: roboto;
+    src:url(‘../fonts/Roboto-Black.ttf’)
+}
+body{
+    width: 100% ;
+    font-family: helvetica neue,Helvetica,Arial,sans-serif ;
+}
+.container h1
+{
+    color: #005799;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+i
+{
+    font-style: italic;
+}
+.top-text a
+{
+    color: #337ab7;
+}
+.top-text li
+{
+    list-style-type: circle;
+}
+.top-text ul
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+.top-text
+{
+    font-size: 14px ;
+    line-height: 1.5;
+}
+.box
+{
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 1140px;
+}
+.top-text span
+{
+    font-weight: bold;
+    font-style: italic;
+}
+.content-text span
+{
+    font-weight: bold;
+}
+.content-text
+{
+    font-size: 12px;
+}
+hr{
+    border-top:1px solid #0f0f0f;
+}
+.box-title strong
+{
+    color: #3a649e;
+
+}
+.box-title
+{
+    padding-top: 5px;
+
+}
+.limit {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    line-height:1.5em;
+    height:1.5em;
+    min-height: 50px;
+}
+.box-desc a
+{
+    color: #00b3ee !important;
+}
+.box-link
+{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.box-linkexchange
+{
+    border-bottom-style:  dashed ;
+    border-width: thin;
+    max-width: 550px;
+    margin-right: 20px;
+
+}
+.box-desc .toggle-description
+{
+    float: right;
+    margin-top: 2px;
+}

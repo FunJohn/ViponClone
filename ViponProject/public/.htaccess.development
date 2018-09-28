@@ -1,0 +1,83 @@
+#Add files type
+	AddType application/x-font-ttf        .ttf
+	AddType application/octet-stream      .ttf
+	AddType font/truetype                 .ttf
+	AddType font/ttf                      .ttf
+	AddType application/font-wof          .woff
+	AddType application/x-font-woff       .woff
+	AddType application/x-woff            .woff
+	AddType application/vnd.ms-fontobject .eot
+	
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+# Redirect non www to www
+    #RewriteCond %{HTTP_HOST} !^www\.
+    #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
+	
+	# Redirect mostcoupon.com/blog to blog.dontpayall.com
+	
+	#RewriteCond %{HTTP_HOST} ^(www\.)?dontpayall.com$ [NC]
+    #RewriteRule ^/?blog/(.*)$ http://wwww.blog.dontpayall.com/$1 [L,R=301]
+    #RewriteCond %{HTTP_HOST} ^(www\.)?dontpayall.com$ [NC]
+    #RewriteRule ^/?blog(.*)$ http://www.blog.dontpayall.com/$1 [L,R=301]
+
+    # Redirect Trailing Slashes...
+    #RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+
+</IfModule>
+
+<ifModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault A0300
+	
+	#Add cache control to file header
+	ExpiresByType application/pdf A300
+	ExpiresByType application/x-javascript A604800
+	ExpiresByType application/javascript A604800
+	ExpiresByType text/javascript A604800
+	ExpiresByType application/x-shockwave-flash A604800
+	ExpiresByType application/shockwave-flash A604800
+	ExpiresByType audio/mpeg A604800
+	ExpiresByType image/gif A604800
+	ExpiresByType image/jpeg A604800
+	ExpiresByType image/png A604800
+	ExpiresByType image/x-icon A2592000
+	ExpiresByType text/css A604800
+	ExpiresByType video/mpeg A2592000
+	ExpiresByType video/quicktime A2592000
+	ExpiresByType video/x-flv A2592000
+	ExpiresByType video/flv A2592000
+	
+	ExpiresByType application/x-font-ttf A31536000
+	ExpiresByType application/octet-stream A31536000
+	ExpiresByType font/truetype A31536000
+	ExpiresByType font/ttf A31536000
+	ExpiresByType application/font-wof A31536000
+	ExpiresByType application/x-font-woff A31536000
+	ExpiresByType application/x-woff A31536000
+	ExpiresByType application/vnd.ms-fontobject A31536000
+
+	# 1 YEAR - doesn't change often
+	<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+	ExpiresDefault A31536000
+	</FilesMatch>
+
+	# 1 WEEK - possible to be changed, unlikely
+	<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+	ExpiresDefault A604800
+	</FilesMatch>
+	<FilesMatch "\.(txt|xml|js|css)$">
+	ExpiresDefault A604800
+	</FilesMatch>
+</ifModule>
