@@ -7,6 +7,10 @@ Route::any('/next-update-from-lib/', 'UpdateFromLibController@updateCouponNextSt
 //Home page
 Route::get('/link-exchange', 'LinkExchangeController@index');
 Route::get('/', 'WelcomeController@index');
+Route::get('/categories', 'DealCategoriesController@index');
+Route::get('/hotdeals', 'HotDealsController@index');
+Route::get('/dealdetails', 'DealDetailsController@index');
+Route::get('/vp-getcode', 'VpGetCodeController@index');
 Route::get('/home', 'HomeController@index');
 
 //Search

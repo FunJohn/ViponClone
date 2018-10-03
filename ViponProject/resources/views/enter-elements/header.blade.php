@@ -42,6 +42,14 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/head_foot.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/search_list.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/new_file.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font_461126_7k2r56afszq41jor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dealdetail.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dealdetail-fb.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dealdetail-st1-animated.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/getcode-sm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/hotdeals-btn.css') }}">
 
     <script src="{{ asset('js/js') }}" type="text/javascript"></script>
     <script type="text/javascript">try{ clicky.init(100829539); }catch(e){}</script>
@@ -125,8 +133,6 @@
     <script src="{{ asset('vendor/jquery/jquery-1.11.3.min.js'.$common['version_app']) }}" type="text/javascript">
 
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     @yield('add_head')
     {!! $settings['header'] !!}

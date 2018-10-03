@@ -1,0 +1,62 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+a:hover,a,a:visited{
+    text-decoration: none;
+    color: #45c5cb;
+}
+.banner-detail{
+    background-color: #45c5cb;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
+.banner-detail img{
+    height: 50px;
+    margin-top: 5px;
+}
+.popup-detail{
+    text-align: center;
+    width: 600px;
+    border-radius: 4px;
+    background-color: white;
+    margin: 90px auto 0;
+    padding: 40px 20px;
+}
+.popup-detail img{
+    width: 100px;
+}
+.code-container{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+.copy-code{
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    padding: 0 30px;
+    background-color: #45c5cb;
+    color: white;
+    border: 1px solid #45c5cb;
+    border-radius: 4px;
+}
+.retired-time{
+    display: none;
+}
+.timeOut{
+    color: #45c5cb;
+}
