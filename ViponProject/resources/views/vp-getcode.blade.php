@@ -20,76 +20,25 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
     <link rel="stylesheet" type="text/css" href="css/default.css">
-    <script type="text/javascript" async="" src="js/bat.js"></script><script type="text/javascript" async="" src="js/analytics.js"></script>
-    <script async="" src="js/gtm.js"></script>
-    <script src="js/bat.js" async=""></script>
-    <script async="" src="js/gtm.js"></script>
-    <script async="" src="js/fbevents.js"></script>
     <script type="text/javascript" charset="utf8" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="js/anonymize.js"></script>
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/head_foot.css">
     <link rel="stylesheet" href="css/getcode-sm.css">
-
-    <script src="js/js" type="text/javascript"></script>
-    <script type="text/javascript">try{ clicky.init(100829539); }catch(e){}</script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100829539ns.gif" /></p></noscript>
-
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-            document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '484493295249936');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=484493295249936&ev=PageView&noscript=1"
-        /></noscript>
-
 
 
     <link rel="manifest" href="https://www.vipon.com/manifest.json">
-    <script src="js/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(["init", {
-            appId: "71db1df8-89d6-4f61-9960-7a76bbbf4032",
-            autoRegister: false,
-            notifyButton: {
-                enable: false /* Set to false to hide */
-            }
-        }]);
-    </script>
-
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MW3BXJ6');</script>
-
-
-    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5869014"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5869014&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
-    <script type="text/javascript" charset="utf8" src="js/BingConversion.js"></script>
 
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <title>GET CODE</title>
     <meta name="description" content="">
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MW3BXJ6');</script>
-    <script type="text/javascript" async="" src="php/in.php"></script><script type="text/javascript" async="" src="php/in(1).php"></script><script type="text/javascript" async="" src="php/in(2).php"></script></head>
+
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW3BXJ6"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <div class="banner-detail"><img src="img/vipon_white_logo.png"></div>
 <div class="popup-detail">
     <img src="img/favorite_pic.png">
@@ -103,26 +52,6 @@
 
 </div>
 <script type="text/javascript" src="js/jquery-2.1.0.js"></script><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.18017976793058454"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.31297002195588086" width="0" height="0" alt="" src="js/0"></div>
-<script type="text/javascript" src="js/clipboard.min.js"></script>
-<script type="text/javascript">
-    //复制到剪切板
-    var clipboard = new Clipboard('#copy');
-    //领码成功后倒计时跳转
-    $('.copy-code').on('click',function(){
-        $(".retired-time,.copy-complete").css('display','block');
-//      	$('.copy-tip').html("Don't forget to apply it at checkout!");
-        var Url2=document.getElementById("name").innerText;
-        var oInput = document.createElement('input');
-        oInput.value = Url2;
-        document.body.appendChild(oInput);
-        oInput.select(); // 选择对象
-        document.execCommand("Copy"); // 执行浏览器复制命令
-        oInput.className = 'oInput';
-        oInput.style.display='none';
-        fbq('track', 'Copy and Go to Amazon', {currency: 'USD', value: ''});
-        window.open( "https://www.amazon.com/PALADA-Electronic-Multifunction-Waterproof-Military/dp/B015H3KYLO");
-    })
 
-</script>
 
-<div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.5289671111420231"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.30391950100785947" width="0" height="0" alt="" src="js/0(1)"></div><iframe src="webPushAnalytics.html" style="display: none;"></iframe></body></html>
+<div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.5289671111420231"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.30391950100785947" width="0" height="0" alt="" ></div></body></html>

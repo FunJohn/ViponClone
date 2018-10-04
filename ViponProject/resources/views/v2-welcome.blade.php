@@ -3217,98 +3217,6 @@ $3.00 </span>
             <a href="https://www.vipon.com/promotion/index?type=instant" target="_blank">View all deals</a>
         </div>
     </div>
-    <script type="text/javascript" src="js/mc-validate.js"></script>
-    <script type="text/javascript">
-        function GetCoupon() {
-            fbq('track', 'Get Coupon');
-        }
-
-        function request_now(product_id) {
-            $('.review_now_' + product_id).attr('disabled', 'disabled').html('<i class="fa fa-spin fa-spinner"></i> Please Wait');
-
-            //折扣码申请接口
-            $.ajax({
-                url: "/code/code",
-                method: 'POST',
-                cache: false,
-                data: {product_id: product_id},
-                dataType: 'json',
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    $('.review_now_' + product_id).addClass('danger').html('There was a error!');
-                    $('.product-notify').html('Something went wrong... refresh your browser and try again.').show();
-                },
-                success: function (data) {
-                    //add by ywq  在这里进行下一步修改
-                    if (data.code == 200) {
-                        ga('send', 'event', 'Deal_popup', 'add_deal', product_id);
-
-                        $('.request-div').hide();
-                        $('.voucher-div .voucher-show span').text(data.voucher);
-                        $('.voucher-div #save_price').text("You've saved " + data.save_price);
-                        $('.voucher-div').show();
-//                            $('#thumbs-down-tips').html(data.data.down);
-//                            $('#thumbs-up-tips').html(data.data.up);
-//                            $('#thumbs-down').html(data.data.down);
-//                            $('#thumbs-up').html(data.data.up);
-                        window.open('/center/popup');
-                        localStorage.setItem('damainId', data.amazon_link);
-                        localStorage.setItem('codeId', data.voucher);
-                        $('#product_' + product_id).addClass('success').html("<span class='glyphicon glyphicon-ok'></span>");
-
-                        return;
-                    } else if (data.code == 300) {
-                        ga('send', 'event', 'Deal_popup', 'add_deal', product_id);
-                        $('.review_now_' + product_id).addClass('success').html('Instant Deal');
-                        $('.product-notify').html("Today\'s coupon code has run out. Please check back tomorrow for the next deal.").show();
-                        return;
-                    } else if (data.code == 400) {
-                        ga('send', 'event', 'Deal_popup', 'add_deal', product_id);
-                        $('.review_now_' + product_id).addClass('success').html('Instant Deal');
-                        $('.product-notify').html('Oops, Instant vouchers have run out.').show();
-                        return;
-                    } else if (data.code == 500) {
-                        $('.review_now_' + product_id).addClass('danger').html('There was a problem!');
-                        //  $('.product-notify').html('You are over your tier limits!').show();
-                        $('.product-notify').html(data.msg).show();
-                        $('#product_' + product_id + ' .btn-review').removeClass('success').html('Instant Deal');
-                        return;
-                    } else if (data.code == 600) {
-                        ga('send', 'event', 'Deal_popup', 'add_deal', product_id);
-                        $('.review_now_' + product_id).addClass('danger').html('Expired');
-                        $('.product-notify').html('Oops, this deal just expired, please choose another deal.').show();
-                        return;
-                    } else if (data.code == 700) {
-                        ga('send', 'event', 'Deal_popup', 'add_deal', product_id);
-                        $('.review_now_' + product_id).addClass('danger').html('Deal Requested');
-                        $('.product-notify').html('You have already requested this deal.').show();
-                        return;
-                    } else if (data.code == 100) {
-                        window.location = '/login';
-                    } else if (data.code == 800) {
-                        window.open(data.amazon_link);
-                    } else {
-                        $('.review_now_' + product_id).removeAttr('disabled').addClass('danger').html('There was a error!');
-                        $('.product-notify').html('Something went wrong... refresh your browser and try again.').show();
-                        return;
-                    }
-
-                }
-            });
-        }
-    </script>
-    <script type="text/javascript">
-        (function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
-            fnames[1] = 'FNAME';
-            ftypes[1] = 'text';
-            fnames[2] = 'MMERGE2';
-            ftypes[2] = 'url';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);
-    </script>
     <style>
         #open {
             position: fixed;
@@ -3416,18 +3324,6 @@ $3.00 </span>
             </div>
 
         </div>
-        <script type="text/javascript" src="js/mc-validate.js"></script>
-        <script type="text/javascript">(function ($) {
-                window.fnames = new Array();
-                window.ftypes = new Array();
-                fnames[0] = 'EMAIL';
-                ftypes[0] = 'email';
-                fnames[1] = 'FNAME';
-                ftypes[1] = 'text';
-                fnames[2] = 'MMERGE2';
-                ftypes[2] = 'url';
-            }(jQuery));
-            var $mcj = jQuery.noConflict(true);</script>
 
     </div>
     <script src="js/jquery-v2-1-4.js"></script>
@@ -4032,76 +3928,6 @@ $3.00 </span>
                 height="0" alt="" src="{{ asset('js/0(1)') }}"><img style="width:0px; height:0px; display:none; visibility:hidden;"
                                                      id="batBeacon0.9285605741648846" width="0" height="0" alt="" src="{{ asset('js/0(2)') }}">
     </div>
-    <script>
-
-        //  Contact Us
-
-        $('#contactModal').on('show.bs.modal', function (e) {
-            $('#contactModal .please-wait').hide();
-        });
-
-        function contact_email_send() {
-            if ($('#contactModal #contact_email_address').val() == '') {
-                alert('Please fill in your email address.');
-                return;
-            }
-
-            if ($('#contactModal #contact_email_body').val() == '') {
-                alert('You forgot to write us a question.');
-                return;
-            }
-
-            var contact_email = $('#contactModal #contact_email_address').val();
-            var contact_name = $('#contactModal #contact_email_name').val();
-            var contact_body = $('#contactModal #contact_email_body').val();
-
-            $('#contactModal .form-group').hide();
-            $('#contactModal .btn-primary').hide();
-            $('#contactModal .please-wait').html('<i class="fa fa-spin fa-spinner"></i> Please Wait...').show();
-
-            $.ajax({
-                url: "/send_email.php",
-                method: 'POST',
-                cache: false,
-                data: {
-                    body: contact_body + '\r\n\r\nFrom:' + contact_email,
-                    from_email: contact_email,
-                    from_name: contact_name,
-                    to_email: "",   //$site_email
-                    notHTML: true
-
-                },
-                success: function (data) {
-                    console.log(data);
-                    $('#contactModal .please-wait').html('Message Sent! <br><br> We will get back to you ASAP.');
-                }
-            });
-
-
-        }
-
-        // How it works
-
-        $('#videoModal').on('hidden.bs.modal', function (e) {
-            $('#videoModal iframe').attr('src', '');
-        });
-
-        function how_it_works() {
-            $('#videoModal .video-container').html('<iframe src="//www.youtube.com/embed/6nDs6cYhpdE?rel=0&vq=hd720&showinfo=0&modestbranding=1&autohide=1&autoplay=1" frameborder="0" allowfullscreen></iframe>');
-            $('#videoModal').modal('show');
-        }
-
-
-        // Review URL
-
-        $('#reviewURLModal').on('shown.bs.modal', function () {
-            $('#reviewURLModal #review_url').focus();
-        });
-
-    </script>
-
-
-
 @endsection
 
 

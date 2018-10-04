@@ -30,11 +30,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('css/bootstrap.min.css') }}" media="all">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/default.css') }}">
-    <script type="text/javascript" async="" src="{{ asset('js/bat.js')}}"></script>
-    <script type="text/javascript" async="" src="{{ asset('js/analytics.js') }}"></script>
-    <script src="{{ asset('js/bat.js') }}" async=""></script>
-    <script async="" src="{{ asset('js/gtm.js') }}"></script>
-    <script async="" src="{{ asset('js/fbevents.js')}}"></script>
     <script type="text/javascript" charset="utf8" src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" charset="utf8" src="{{ asset('js/anonymize.js') }}"></script>
@@ -51,19 +46,9 @@
     <link rel="stylesheet" href="{{ asset('css/getcode-sm.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hotdeals-btn.css') }}">
 
-    <script src="{{ asset('js/js') }}" type="text/javascript"></script>
     <script type="text/javascript">try{ clicky.init(100829539); }catch(e){}</script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100829539ns.gif" /></p></noscript>
 
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-            document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '484493295249936');
-        fbq('track', 'PageView');
-    </script>
     <noscript>
         <img height="1" width="1" style="display:none"
              src="https://www.facebook.com/tr?id=484493295249936&ev=PageView&noscript=1"
@@ -71,32 +56,8 @@
     </noscript>
 
     <link rel="manifest" href="https://www.vipon.com/manifest.json">
-    <script src="{{ asset('js/OneSignalSDK.js') }}" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(["init", {
-            appId: "71db1df8-89d6-4f61-9960-7a76bbbf4032",
-            autoRegister: false,
-            notifyButton: {
-                enable: false /* Set to false to hide */
-            }
-        }]);
-    </script>
-
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MW3BXJ6');
-    </script>
-
-    <script>
-        (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5869014"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
-    </script>
 
     <noscript><img src="//bat.bing.com/action/0?ti=5869014&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
-    <script type="text/javascript" charset="utf8" src="{{ asset('js/BingConversion.js') }}"></script>
 
     <meta property="og:title" content="Vipon: Amazon Coupon Codes and Deals">
     <meta property="og:description" content="Become a member of our deals community ART! Get access to amazing deals on products. Shopping on our site is easy and fun.">
@@ -115,10 +76,6 @@
     </style>
     <style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }
     </style>
-    <script type="text/javascript" async="" src="php/in.php">
-    </script>
-
-    <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=ee34c7e32a7e2799371a04fc3e40975354a5f968"></script>
 
     <!-- TradeDoubler site verification 2982804 -->
     @if(isset($noRobot))
@@ -138,13 +95,6 @@
     {!! $settings['header'] !!}
 
     <script type="text/javascript">
-
-        function setCookie(name,value,days)
-        {
-            var exp = new Date();
-            exp.setTime(exp.getTime() + days*24*60*60*1000);
-            document.cookie = name  ="+ value + ";expires=" + exp.toGMTString()+';domain=.vipon.com;path=/';"
-        }
 
         //左上角国家图标点击事件
         $('.down_arrow').parent().on('click', function (e) {
@@ -282,59 +232,9 @@
 
     </script>
 
-    <script>
-        $(function(){
-            /*自动完成获取推荐关键词*/
-            var ajaxPost=false;
-            var search_index=0;
-            $("#search,#m_search").bind("input propertychange",function(){
-                if($(this).val()!="")
-                {
-                    if($(this).attr('id')=='search'){search_index=0}else if($(this).attr('id')=='m_search'){search_index=1};
-                    if(ajaxPost!=false){ajaxPost.abort();}
-                    $(".completer-container").eq(search_index).hide();
-                    ajaxPost=$.post("/completion/search",{"keywords":$(this).val()},function(data){
-
-                        if(data.data.length>0)
-                        {
-                            var html='';
-                            $.each(data.data,function(i,item){
-                                html+='<li >'+item.keyword+'</li>'
-                            })
-                            $(".completer-container").eq(search_index).html(html).show();
-
-                        }
-                        else
-                        {
-                            $(".completer-container").eq(search_index).hide();
-                        }
-                    })
-                }
-                else
-                {
-                    $(".completer-container").eq(search_index).hide();
-                    if(ajaxPost!=false){ajaxPost.abort();}
-                }
-            })
-            /*推荐关键词绑定点击事件*/
-            $(".completer-container").on('click','li',function(){
-                $("#search,#m_search").val($(this).text());
-                $(".completer-container").hide();
-                if(search_index==0){$("#search").focus();}else{$("#m_search").focus();}
-            });
-
-        })
-
-    </script>
 </head>
 <body style="zoom: 1;">
 
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW3BXJ6"
-            height="0" width="0" style="display:none;visibility:hidden">
-
-    </iframe>
-</noscript>
 <div id="header">
     <div class="header_top">
         <div class="clearfix">
